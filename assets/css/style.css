@@ -1,0 +1,276 @@
+
+/* =================================
+   TRAVELGO - STYLES PRINCIPAUX
+================================= */
+
+/* VARIABLES CSS */
+:root {
+    --travel-blue: #087eaf;
+    --travel-cyan: #00b4d8;
+    --travel-dark: #063b5c;
+    --travel-light: #eaf8fc;
+}
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263746;
+    background-color: #fff;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: white;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--travel-blue);
+}
+
+.navbar-brand span {
+    color: var(--travel-cyan);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--travel-dark);
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--travel-cyan);
+}
+
+/* BOUTONS */
+.btn-travel {
+    background: var(--travel-blue);
+    color: white;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-travel:hover {
+    background: var(--travel-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+    min-height: 650px;
+    background:
+        linear-gradient(
+            rgba(3, 35, 58, 0.45),
+            rgba(3, 35, 58, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    font-weight: 800;
+    max-width: 750px;
+    line-height: 1.15;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* RECHERCHE */
+.search-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    color: var(--travel-dark);
+    position: relative;
+    z-index: 2;
+}
+
+/* SECTIONS */
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-title {
+    font-weight: 800;
+    color: var(--travel-dark);
+    margin-bottom: 20px;
+}
+
+/* SOUS-TITRES */
+.section-subtitle {
+    color: var(--travel-cyan);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* DESTINATIONS */
+.destination-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* OFFRES */
+.offers-section {
+    background: var(--travel-light);
+    padding: 85px 0;
+}
+
+/* A PROPOS */
+.about-section img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.about-section h2 {
+    color: var(--travel-dark);
+    font-weight: 800;
+}
+
+/* CONTACT */
+.contact-section {
+    background: #f5fbff;
+    padding: 85px 0;
+}
+
+.contact-section h2 {
+    color: var(--travel-dark);
+    font-weight: 800;
+}
+
+/* FOOTER */
+footer {
+    background: var(--travel-dark);
+    color: white;
+    padding: 50px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--travel-cyan);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 600px;
+        text-align: center;
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .destination-card img {
+        height: 250px;
+    }
+}
+
+
+
+
+/* BANNIERES DES PAGES */
+.page-banner {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+/* CARTES */
+.destination-card .card-body {
+    padding: 22px;
+}
+
+.destination-card .card-body p {
+    color: #647482;
+    line-height: 1.7;
+}
+
+/* FORMULAIRES */
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #087eaf;
+    box-shadow: 0 0 0 0.2rem rgba(8, 126, 175, 0.15);
+}
+
+/* LIENS FOOTER */
+footer h4 span {
+    color: #00b4d8;
+}
+
+footer .social-links a {
+    font-size: 22px;
+    margin: 0 10px;
+}

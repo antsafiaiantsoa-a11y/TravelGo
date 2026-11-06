@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelGo - Explorez le monde</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="description" content="TravelGo, votre agence de voyage pour découvrir les plus belles destinations tropicales.">
+
+    <!-- Bootstrap CSS compilé avec Sass -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-airplane-engines-fill"></i>
+                TravelGo<span class="text-info">.</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="voyages.html">Nos voyages</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="apropos.html">À propos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <a href="contact.html" class="btn btn-travel">
+                    Réserver maintenant
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-9">
+
+                    <span class="badge bg-info mb-3 p-2">
+                        <i class="bi bi-sun-fill"></i>
+                        Votre prochaine aventure commence ici
+                    </span>
+
+                    <h1>
+                        Explorez le monde,
+                        <span class="text-info">vivez vos rêves.</span>
+                    </h1>
+
+                    <p class="my-4">
+                        Découvrez des destinations exceptionnelles,
+                        des plages paradisiaques et des expériences
+                        inoubliables avec TravelGo.
+                    </p>
+
+                    <a href="#destinations" class="btn btn-travel btn-lg">
+                        Découvrir nos destinations
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- FORMULAIRE DE RECHERCHE -->
+            <div class="row mt-5">
+                <div class="col-lg-11">
+
+                    <div class="search-box">
+
+                        <form id="searchForm" class="row g-3 align-items-end">
+
+                            <div class="col-md-4">
+                                <label for="destination" class="form-label fw-bold">
+                                    <i class="bi bi-geo-alt text-primary"></i>
+                                    Destination
+                                </label>
+
+                                <select class="form-select" id="destination" required>
+                                    <option value="">Choisir une destination</option>
+                                    <option value="Madagascar">Madagascar</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Bali">Bali</option>
+                                    <option value="Maurice">Île Maurice</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="departure" class="form-label fw-bold">
+                                    <i class="bi bi-calendar text-primary"></i>
+                                    Date de départ
+                                </label>
+
+                                <input type="date" class="form-control"
+                                    id="departure" required>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="travelers" class="form-label fw-bold">
+                                    <i class="bi bi-people text-primary"></i>
+                                    Voyageurs
+                                </label>
+
+                                <input type="number" class="form-control"
+                                    id="travelers" min="1" value="1" required>
+                            </div>
+
+                            <div class="col-md-3">
+                                <button type="submit"
+                                    class="btn btn-travel w-100">
+                                    <i class="bi bi-search"></i>
+                                    Rechercher
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- DESTINATIONS -->
+    <section class="section-padding" id="destinations">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="text-primary fw-bold">
+                    NOS DESTINATIONS
+                </span>
+
+                <h2 class="section-title mt-2">
+                    Où souhaitez-vous partir ?
+                </h2>
+
+                <p class="text-secondary">
+                    Découvrez nos destinations les plus populaires.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- MADAGASCAR -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=85"
+                            class="card-img-top"
+                            alt="Plage tropicale">
+
+                        <div class="card-body">
+
+                            <span class="text-primary small fw-bold">
+                                AFRIQUE
+                            </span>
+
+                            <h5 class="card-title fw-bold mt-2">
+                                Madagascar
+                            </h5>
+
+                            <p class="card-text text-secondary">
+                                Explorez les paysages uniques,
+                                les plages et la biodiversité de la Grande Île.
+                            </p>
+
+                            <a href="destinations.html"
+                                class="text-primary fw-bold text-decoration-none">
+                                Découvrir
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- MALDIVES -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=85"
+                            class="card-img-top"
+                            alt="Îles tropicales des Maldives">
+
+                        <div class="card-body">
+
+                            <span class="text-primary small fw-bold">
+                                ASIE
+                            </span>
+
+                            <h5 class="card-title fw-bold mt-2">
+                                Maldives
+                            </h5>
+
+                            <p class="card-text text-secondary">
+                                Profitez des eaux turquoise et
+                                des magnifiques plages de sable blanc.
+                            </p>
+
+                            <a href="destinations.html"
+                                class="text-primary fw-bold text-decoration-none">
+                                Découvrir
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- BALI -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card destination-card h-100">
+
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=85"
+                            class="card-img-top"
+                            alt="Paysage tropical de Bali">
+
+                        <div class="card-body">
+
+                            <span class="text-primary small fw-bold">
+                                ASIE
+                            </span>
+
+                            <h5 class="card-title fw-bold mt-2">
+                                Bali
+                            </h5>
+
+                            <p class="card-text text-secondary">
+                                Entre nature, temples et plages,
+                                vivez une expérience exceptionnelle.
+                            </p>
+
+                            <a href="destinations.html"
+                                class="text-primary fw-bold text-decoration-none">
+                                Découvrir
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5">
+
+                <a href="destinations.html" class="btn btn-travel">
+                    Voir toutes les destinations
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- AVANTAGES -->
+    <section class="section-padding bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    Pourquoi choisir TravelGo ?
+                </h2>
+
+                <p class="text-secondary">
+                    Nous vous accompagnons à chaque étape de votre voyage.
+                </p>
+            </div>
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-4">
+                    <i class="bi bi-globe-americas display-4 text-primary"></i>
+                    <h5 class="fw-bold mt-3">Destinations variées</h5>
+                    <p class="text-secondary">
+                        Découvrez des lieux magnifiques partout dans le monde.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="bi bi-shield-check display-4 text-primary"></i>
+                    <h5 class="fw-bold mt-3">Accompagnement</h5>
+                    <p class="text-secondary">
+                        Profitez d'un accompagnement pour préparer votre séjour.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="bi bi-heart display-4 text-primary"></i>
+                    <h5 class="fw-bold mt-3">Voyages inoubliables</h5>
+                    <p class="text-secondary">
+                        Créez des souvenirs qui resteront gravés.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <h3 class="fw-bold">
+                        <i class="bi bi-airplane-engines-fill"></i>
+                        TravelGo.
+                    </h3>
+
+                    <p class="text-white-50">
+                        Explorez le monde, vivez vos rêves.
+                        Votre aventure commence avec nous.
+                    </p>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Accueil</a></li>
+                        <li><a href="destinations.html" class="text-white-50 text-decoration-none">Destinations</a></li>
+                        <li><a href="voyages.html" class="text-white-50 text-decoration-none">Voyages</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Suivez-nous</h5>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <p class="text-center text-white-50 mb-0">
+                &copy; 2026 TravelGo. Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript personnalisé -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
